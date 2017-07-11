@@ -135,14 +135,14 @@ span.psw {
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="/action_page.php">
+  <form class="modal-content animate" method="POST" action="../login/Login_Stat.php"><!--Add action -->
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="images/img_avatar2.png" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
-        <form method="POST" action=""><!--Add action -->
+        
             <label style="color: #000"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
 
@@ -151,7 +151,7 @@ span.psw {
         
             <button type="submit">Login</button>
             <input type="checkbox" checked="checked"> <label style="color: #000">Remember me</label>
-        </form>
+        
       
     </div>
 
