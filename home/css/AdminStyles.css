@@ -12,6 +12,11 @@ body {
 	width: 0;
 	clear: both;
 }
+
+.usrcontainer {
+    padding: 16px;
+}
+
 .admin-panel {
 	width: 990px;
 	margin: 50px auto;
@@ -138,6 +143,15 @@ body {
 	line-height: 1;
 	margin-right: 10px;
 	-webkit-font-smoothing: antialiased;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 #dashboard>div {
@@ -292,6 +306,21 @@ body {
 	background: -ms-linear-gradient(top,rgb(255,255,255),rgb(245,245,245));
 	background: linear-gradient(top,rgb(255,255,255),rgb(245,245,245));
 }
+.signupbtn {
+    padding: 14px 20px;
+    background-color: #4CAF50;
+}
+
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 50%;
+}
+
 /*statusbar底部功能按钮*/
 .statusbar {
 	position: absolute;
