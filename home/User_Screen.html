@@ -1,9 +1,15 @@
+<?php  
+  session_start();
+  if (!isset($_SESSION["UName"])) {
+    header("Location: Error.html");
+    exit();
+  }
+?>
 <!DOCTYPE html> 
 <html>
-
 <head>
-  <title>Styles 4 You</title>
-  <meta name="description" content="website description" />
+  <title>Welcome to the Stock Management System</title>
+  <meta name="description" content="Stock Managing Services Granted for users" />
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
