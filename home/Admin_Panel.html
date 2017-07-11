@@ -22,6 +22,18 @@
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
   <link rel="stylesheet" type="text/css" href="css/AdminStyles.css" />
+  <!-- Footable is taken from a CDN Server -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.footable/2.0.3/css/footable.core.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.footable/2.0.3/css/footable.metro.min.css">
+        <!--  <script src="js/jquery-1.11.3.min.js"></script>  -->
+        <!--jquery-1.11.3.min.js from CDN -->
+        <script
+          src="https://code.jquery.com/jquery-1.11.3.js"
+          integrity="sha256-IGWuzKD7mwVnNY01LtXxq3L84Tm/RJtNCYBfXZw3Je0="
+          crossorigin="anonymous">          
+        </script>
+  <script src="https://cdn.jsdelivr.net/jquery.footable/2.0.3/footable.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.footable/2.0.3/footable.paginate.min.js"></script>
 </head>
 <body>
       <div class="admin-panel clearfix">
@@ -79,7 +91,7 @@
        <div id="AddUser">
          <h2 class="header">Add users</h2>
          <br>
-         <form action="/action_page.php" style="border:1px solid #ccc">
+         <form action="/.php" style="border:1px solid #ccc">
             <div class="usrcontainer">
               <label><b>Username</b></label>
               <input type="text" name="usrname" placeholder="Username" required>
@@ -104,7 +116,42 @@
 
        </div>
        <div id="RMUser">
-         <h2 class="header">Registered Users</h2>
+         <h2 class="header">User Information</h2>
+         <br>
+         <table class="footable" data-page-size="5" data-first-text="FIRST" data-next-text="NEXT" data-previous-text="PREVIOUS" data-last-text="LAST" >
+            <thead>
+            <tr>    
+                <th>#</th>            
+                <th>Username</th>
+                <th>Email</th>                
+                <th></th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+                <!-- populate table from mysql database -->
+            <?php             
+            while($row1 = mysql_fetch_array($result)):;?>
+            <tr>
+                <td><?php echo $row1[0];?></td>
+                <td><?php echo $row1[1];?></td>
+                <td><?php echo $row1[2];?></td>
+                
+            </tr>
+            <?php endwhile;?>
+
+            </tbody>
+
+            <!-- the pagination -->
+            <!-- hide-if-no-paging = hide the pagination control -->
+            <tfoot class="hide-if-no-paging">
+            <td colspan="10">
+                <div class="pagination"></div>
+            </td>
+            </tfoot>
+        </table>
+
        </div>
        <div id="AddStock">
          <h2 class="header">Add Stock</h2>
