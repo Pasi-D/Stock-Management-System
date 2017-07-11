@@ -19,7 +19,7 @@ include_once("config.php");
   <ul>
    </div>
   <div id="instruments-wrapper">
-    <h1>Shirts</h1>
+    <h1>Available Stocks</h1>
     <div class="instruments">
     <?php
     //current URL of the Page. cart_update.php redirects back to this URL
@@ -33,13 +33,13 @@ include_once("config.php");
             {
           echo '<div class="instrument">'; 
                 echo '<form method="post" action="cart_update.php">';
-          echo '<div class="instrument-thumb"><img src="images/'.$obj->product_img_name.'"></div>';
+          echo '<div class="instrument-thumb"><img src="./images/Pics/'.$obj->product_img_name.'"></div>';
                 echo '<div class="instrument-content"><h3>'.$obj->product_name.'</h3>';
                 echo '<div class="instrument-desc">'.$obj->product_desc.'</div>';
                 echo '<div class="instrument-info">';
-          echo 'product_price '.$currency.$obj->product_price.' | ';
+          echo 'product_Space '.$obj->product_Space.' | ';
                 echo 'Qty <input type="text" name="product_qty" value="1" size="3" />';
-          echo '<button class="add_to_cart">Add To Cart</button>';
+          #echo '<button class="add_to_cart">Add To Cart</button>';
           echo '</div></div>';
                 echo '<input type="hidden" name="product_code" value="'.$obj->product_code.'" />';
                 echo '<input type="hidden" name="type" value="add" />';
@@ -52,7 +52,7 @@ include_once("config.php");
         ?>
     </div>
     
-<div class="shopping-cart">
+<!--<div class="shopping-cart">
 <h2>Your Shopping Cart</h2>
 <?php
 if(isset($_SESSION["products"]))
@@ -80,7 +80,7 @@ if(isset($_SESSION["products"]))
 ?>
 </div>
     
-</div>
+</div> -->
 
 </body>
 </html>
