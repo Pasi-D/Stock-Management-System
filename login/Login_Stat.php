@@ -31,7 +31,7 @@
 		}else{
 			$_SESSION['UName'] = $name;
 			if ($isAdmin == 'Y') {
-				#Add Admin Page Location here
+				header("Location: ../home/Admin_Panel.html");
 			}else{
 				header("Location: ../home/User");
 			}						
