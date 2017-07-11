@@ -33,7 +33,7 @@
 			if ($isAdmin == 'Y') {
 				header("Location: ../home/Admin_Panel.html");
 			}else{
-				header("Location: ../home/User");
+				header("Location: ../home/User_Screen.html");
 			}						
 			exit;
 		}
